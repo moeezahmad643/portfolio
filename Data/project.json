@@ -10,5 +10,11 @@
         "title":"Dictionary App",
         "view":"dictionary/dictionary.html",
         "git":"https://github.com/moeezahmad643/dictionary"
+    },
+    {
+        "icon":"task.png",
+        "title":"To-Do App",
+        "view":"task-list/task.html",
+        "git":"https://github.com/moeezahmad643/dictionary"
     }
 ]

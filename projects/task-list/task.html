@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tasks</title>
+</head>
+
+<body>
+    <div class="m-5">
+        <h3 class="text-center">
+            Add A New Task 
+        </h3>
+        <div id="add-task" class="d-flex flex-column">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Task Title</label>
+                <input type="email" class="form-control shadow" id="title" placeholder="Taks Title Here">
+                <p id="title-err" class="text-danger"></p>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Task Discription</label>
+                <textarea  class="form-control shadow" id="description" placeholder="Task Description Here"
+                    rows="3"></textarea>
+                <p id="description-err" class="text-danger"></p>
+                    
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="addtask()">Submit</button>
+    </div>
+
+    <div class="m-5">
+        <h3 class="text-center my-5">
+            My Tasks 
+        </h3>
+        <div id="tasks" class="w-100 d-flex flex-column gap-3 ">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>

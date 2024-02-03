@@ -1,0 +1,9 @@
+.task{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    & h3 , p{
+        width: 30%;
+    }
+}
