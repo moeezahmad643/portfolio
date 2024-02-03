@@ -1,0 +1,35 @@
+#technology {
+    display: flex;
+    flex-direction: column;
+  
+    #technology-bottom {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      & div {
+        display: flex;
+        place-items: center;
+        & img {
+          width: 14vw;
+          margin: 10px;
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      #technology-top,
+      #technology-bottom {
+        flex-wrap: wrap;
+      }
+    }
+    #technology-middle {
+      padding: 10px;
+      font-size: 1.5rem;
+      & h1 {
+        margin: 15px;
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,295 @@
+#home {
+    background-color: #1f1f21;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding-bottom:5vh ; */
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    & h2 {
+      letter-spacing: 1px;
+    }
+    #option {
+      display: flex;
+      margin: 0 15px;
+      list-style: none;
+      & a {
+        margin: 0 10px;
+        box-shadow: inset 0 0 0 0 #ffae01;
+        color: white;
+        padding: 3px 0.35rem;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      & a:hover {
+        box-shadow: inset 100px 0 0 0 #ffae01;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  
+    & div {
+      color: white;
+      font-size: 30px;
+      #logo {
+        transition: all 1s;
+        display: inline-block;
+        transform: rotate(0deg); /* Adjust as needed */
+      }
+      & ul {
+        display: flex;
+        transition: all 1s;
+        position: absolute;
+        right: 15px;
+        gap: 10px;
+        top: -400px;
+        list-style: none;
+  
+        flex-direction: column;
+        & li a {
+          color: white;
+          border-radius: 100px;
+        }
+        & li:hover {
+          color: white;
+          cursor: pointer;
+          border-radius: 100px;
+        }
+      }
+    }
+  
+    #menu-bar {
+      & label {
+        display: none;
+        .bi {
+          transform: rotate(0deg);
+          display: block;
+          transition: all 1s;
+        }
+      }
+    }
+  }
+  #menu-bar #option2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -200px;
+    font-size: medium;
+    transition: all 0.5s;
+  }
+  @media (max-width: 450px) {
+    nav {
+      #option {
+        display: none;
+      }
+      #option-box {
+        display: flex;
+        gap: 10px;
+        #menu-bar {
+          & label {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  #middle-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+  }
+  #middle-section > div {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    justify-content: left;
+    #details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & h1 {
+        font-size: 50px;
+      }
+      & p {
+        font-size: small;
+        text-indent: 5px;
+      }
+      & span {
+        border: 1px solid gray;
+        align-self: flex-start;
+        padding: 10px 20px;
+        font-size: x-small;
+        border-radius: 15px;
+        background: rgb(41, 41, 41);
+        background: linear-gradient(
+          90deg,
+          rgba(41, 41, 41, 1) 8%,
+          rgba(111, 111, 111, 1) 52%,
+          rgb(94, 94, 94) 100%
+        );
+        transition: all 1s;
+        cursor: default;
+        box-shadow: 0 0 4px 2px #7c7c7c;
+      }
+      & span:hover {
+        background: rgb(41, 41, 41);
+        background: linear-gradient(
+          90deg,
+          rgb(145, 145, 145) 100% rgb(136, 136, 136) 52%,
+          rgb(126, 126, 126) 8%
+        );
+        box-shadow: 0 0 14px 2px #7c7c7c;
+      }
+      & div {
+        & button {
+          padding: 5px 15px;
+          border-radius: 5px;
+          border: 0;
+          margin: 10px 0;
+        }
+        #project-btn {
+          background-color: #ffae01;
+          color: white;
+        }
+        #project-btn:hover {
+          background-color: white;
+          color: #ffae01;
+        }
+        #about-btn {
+          background-color: white;
+          color: #141414;
+        }
+        #about-btn:hover {
+          background-color: #141414;
+          color: white;
+        }
+      }
+    }
+    & img {
+      border-radius: 300px;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 6px 2px #ffae01;
+      transition: all 0.5s;
+    }
+    & img:hover {
+      box-shadow: 0 0 22px 2px #ffae01;
+    }
+  }
+  @media (max-width: 820px) {
+    #middle-section {
+      gap: 0;
+      & > div {
+        width: 320px;
+        height: 320px;
+        /* display: block; */
+  
+        #details {
+          /* display: block; */
+          /* height: auto; */
+          & h1 {
+            font-size: xx-large;
+            padding: 15px;
+          }
+        }
+      }
+      #middle-section-p1 {
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 639px) {
+    #middle-section {
+      gap: 0;
+      & > div {
+        width: 310px;
+        height: 300px;
+        /* display: block; */
+  
+        #details {
+          display: block;
+          height: auto;
+          & h1 {
+            font-size: xx-large;
+            padding: 15px;
+          }
+          & p{
+            width: 300px;
+          }
+        }
+      }
+      #middle-section-p1 {
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    #middle-section {
+      gap: 0;
+      & > div {
+        width: 100%;
+        height: 270px;
+        display: flex;
+        justify-content: center;
+        /* display: block; */
+  
+        #details {
+          display: block;
+          height: auto;
+          & span {
+            padding: 5px;
+          }
+          & h1 {
+            font-size: x-large;
+            padding: 10px;
+          }
+        }
+        & img {
+          width: 240px;
+        }
+      }
+      #middle-section-p1 {
+        height: auto;
+      }
+    }
+  }
+  #link-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    & ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      & li {
+        font-size: xx-large;
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    #link-section {
+      & ul {
+        & li {
+          font-size: x-large;
+        }
+      }
+    }
+  }
+  @media (max-width: 300px) {
+    #link-section {
+      & ul {
+        & li {
+          font-size: large;
+        }
+      }
+    }
+  }
+  

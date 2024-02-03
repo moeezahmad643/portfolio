@@ -1,0 +1,14 @@
+[
+    {
+        "icon":"weather.png",
+        "title":"Weather App",
+        "view":"weather/weather.html",
+        "git":"https://github.com/moeezahmad643/weather-app"
+    },
+    {
+        "icon":"dictionary.png",
+        "title":"Dictionary App",
+        "view":"dictionary/dictionary.html",
+        "git":"https://github.com/moeezahmad643/dictionary"
+    }
+]
