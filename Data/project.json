@@ -9,13 +9,19 @@
         "icon":"news.png",
         "title":"News App",
         "view":"news-app/news.html",
-        "git":"https://github.com/moeezahmad643/weather-app"
+        "git":"https://github.com/moeezahmad643/news-app"
     },
     {
         "icon":"dictionary.png",
         "title":"Dictionary App",
         "view":"dictionary/dictionary.html",
         "git":"https://github.com/moeezahmad643/dictionary"
+    },
+    {
+        "icon":"currency.png",
+        "title":"Currency Convertor",
+        "view":"currency convertor/index.html",
+        "git":"https://github.com/moeezahmad643/dictionary" 
     },
     {
         "icon":"task.png",
