@@ -6,6 +6,12 @@
         "git":"https://github.com/moeezahmad643/weather-app"
     },
     {
+        "icon":"news.png",
+        "title":"News App",
+        "view":"news-app/news.html",
+        "git":"https://github.com/moeezahmad643/weather-app"
+    },
+    {
         "icon":"dictionary.png",
         "title":"Dictionary App",
         "view":"dictionary/dictionary.html",
@@ -15,6 +21,6 @@
         "icon":"task.png",
         "title":"To-Do App",
         "view":"task-list/task.html",
-        "git":"https://github.com/moeezahmad643/dictionary"
+        "git":"https://github.com/moeezahmad643/To-Do-App"
     }
 ]
