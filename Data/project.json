@@ -21,7 +21,7 @@
         "icon":"currency.png",
         "title":"Currency Convertor",
         "view":"currency convertor/index.html",
-        "git":"https://github.com/moeezahmad643/dictionary" 
+        "git":"https://github.com/moeezahmad643/currency-converter" 
     },
     {
         "icon":"task.png",
