@@ -1,32 +1,38 @@
 [
     {
-        "icon":"weather.png",
-        "title":"Weather App",
-        "view":"weather/weather.html",
-        "git":"https://github.com/moeezahmad643/weather-app"
+        "icon": "weather.png",
+        "title": "Weather App",
+        "view": "weather/weather.html",
+        "git": "https://github.com/moeezahmad643/weather-app"
     },
     {
-        "icon":"news.png",
-        "title":"News App",
-        "view":"news-app/news.html",
-        "git":"https://github.com/moeezahmad643/news-app"
+        "icon": "news.png",
+        "title": "News App",
+        "view": "news-app/news.html",
+        "git": "https://github.com/moeezahmad643/news-app"
     },
     {
-        "icon":"dictionary.png",
-        "title":"Dictionary App",
-        "view":"dictionary/dictionary.html",
-        "git":"https://github.com/moeezahmad643/dictionary"
+        "icon": "dictionary.png",
+        "title": "Dictionary App",
+        "view": "dictionary/dictionary.html",
+        "git": "https://github.com/moeezahmad643/dictionary"
     },
     {
-        "icon":"currency.png",
-        "title":"Currency Convertor",
-        "view":"currency convertor/index.html",
-        "git":"https://github.com/moeezahmad643/currency-converter" 
+        "icon": "currency.png",
+        "title": "Currency Convertor",
+        "view": "currency convertor/index.html",
+        "git": "https://github.com/moeezahmad643/currency-converter"
     },
     {
-        "icon":"task.png",
-        "title":"To-Do App",
-        "view":"task-list/task.html",
-        "git":"https://github.com/moeezahmad643/To-Do-App"
+        "icon": "task.png",
+        "title": "To-Do App",
+        "view": "task-list/task.html",
+        "git": "https://github.com/moeezahmad643/To-Do-App"
+    },
+    {
+        "icon": "quiz.png",
+        "title": "Quiz App",
+        "view": "quiz/quiz.html",
+        "git": "https://github.com/moeezahmad643/Quiz-App"
     }
 ]
