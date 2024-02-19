@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>EaisyPaisa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-size: larger;
+            align-items: center;
+            padding: 10px;
+            background-color: rgb(240, 240, 240);
+
+            & p {
+                font-size: x-large;
+                font-weight: 400;
+            }
+        }
+
+        #label {
+            margin: 10px;
+        }
+
+        #mainSearch {
+            padding: 10px;
+        }
+
+        #search {
+            display: flex;
+            border: 1px solid rgb(211, 211, 211);
+            width: 100%;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+
+            & div {
+                width: 10px;
+                background-color: green;
+                height: 50px;
+            }
+
+            & input {
+                border: 0px;
+                outline: 0px;
+                width: 100%;
+                padding: 10px;
+            }
+
+            & i {
+                background-color: rgb(218, 217, 217);
+                color: white;
+                font-size: x-small;
+                border-radius: 10px;
+                width: 25px;
+                height: 23px;
+                margin: 5px;
+                display: grid;
+                place-items: center;
+            }
+        }
+
+        #contactTitle {
+            background-color: rgb(236, 236, 236);
+            padding: 5px 10px;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .card {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #innerBox {
+                display: flex;
+
+                .ring {
+                    padding: 10px;
+                    border: 2px solid green;
+                    border-radius: 100px;
+
+                }
+
+                &>div {
+                    padding: 0 15px;
+
+
+                }
+            }
+
+
+            &>img {
+                width: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <i class="bi bi-chevron-left"></i>
+        <p>easypaisa Transfer</p>
+        <span></span>
+    </header>
+    <nav id="label">
+        <small>
+            Enter Mobile Number and Contact Name
+        </small>
+    </nav>
+    <section id="mainSearch">
+        <section id="search">
+            <div class="greenline"></div>
+            <input type="text" placeholder="Enter Number or Search Contact " id="searchBar">
+            <i onclick="window.location.href=`loading1.html?name=${name}&number=${document.getElementById('searchBar').value}`"
+                class="bi bi-chevron-right"></i>
+        </section>
+    </section>
+    <nav id="contactTitle">
+        <b>Your easypaisa Contacts</b>
+    </nav>
+    <div id="cards" class="cards">
+        <div class="card">
+            <div id="innerBox"> 
+                <div class="ring">+3</div>
+                <div>
+                    <div style="font-weight: 700;">Moeez Ahmad</div>
+                    <div style="color: gray; font-size:15px;">03259491349</div>
+                </div>
+            </div>
+            <img src="logo.jpg" alt="">
+        </div>
+        <div class="card">
+            <div id="innerBox"> 
+                <div class="ring">+3</div>
+                <div>
+                    <div style="font-weight: 700;">Ahmad Saeed</div>
+                    <div style="color: gray; font-size:15px;">0321837712</div>
+                </div>
+            </div>
+            <img src="logo.jpg" alt="">
+        </div>
+        <div class="card">
+            <div id="innerBox"> 
+                <div class="ring">+3</div>
+                <div>
+                    <div style="font-weight: 700;">Aslam Ali</div>
+                    <div style="color: gray; font-size:15px;">03219491349</div>
+                </div>
+            </div>
+            <img src="logo.jpg" alt="">
+        </div>
+    </div>
+
+    <nav id="contactTitle">
+        <b style=" font-size:15px;">No Contacts Found</b>
+    </nav>
+</body>
+<script>
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const name = urlParams.get('name');
+
+    console.log(name)
+
+</script>
+
+</html>

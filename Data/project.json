@@ -34,5 +34,15 @@
         "title": "Quiz App",
         "view": "quiz/quiz.html",
         "git": "https://github.com/moeezahmad643/Quiz-App"
+    },{
+        "icon": "translator.png",
+        "title": "Translator App",
+        "view": "translator/index.html",
+        "git": "https://github.com/moeezahmad643/Translator"
+    },{
+        "icon": "music.png",
+        "title": "Music Player",
+        "view": "musicPlayer/index.html",
+        "git": "https://github.com/moeezahmad643/Music"
     }
 ]

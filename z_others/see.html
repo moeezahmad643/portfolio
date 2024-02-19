@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px 5px;
+            background: gray;
+            display: grid;
+            place-items: center;
+
+            #main-box {
+                background: white;
+                height: auto;
+                width: 90vw;
+                border-top: dashed;
+                border-bottom: dashed;
+                border-color: gray;
+                border-size: 15px;
+
+                & img {
+                    width: 100%;
+                }
+
+                .box {
+                    color: gray;
+                    font-size: small;
+                    line-height: 4px;
+                    padding: 2px;
+                    margin: 0px 18px;
+
+                    & p {
+                        font-size: small;
+                    }
+
+                    .bold {
+                        font-weight: bold;
+                    }
+
+                    #main-text {
+                        color: #02BF63;
+                        font-weight: bold;
+                    }
+
+                    #total-price {
+                        font-size: medium;
+                    }
+
+                    .element {
+                        font-size: small;
+                    }
+                }
+
+                #date-time,
+                #id {
+                    font-size: x-small;
+                }
+
+                #with-img {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-box">
+        <img src="data-files/main.jpeg">
+        <div class="box" id="time-box">
+            <p id="date-time"></p>
+            <p id="id"></p>
+        </div>
+        <div class="box">
+            <p class="bold">Finding Source</p>
+            <p id="with-img" class="element"><img style="width:17px;" src="data-files/small-logo.png">easypaisa Mobile
+                Account</p>
+        </div>
+        <div class="box">
+            <p class="bold">Sent to</p>
+            <p class="element" id="reciver-name">Noman Akram</p>
+            <p class="element" id="reciver-number">03215898897</p>
+        </div>
+        <div class="box">
+            <p class="bold">Account Details</p>
+            <p class="element" id="reciver-name2"></p>
+        </div>
+        <div class="box">
+            <p class="bold">Sent by</p>
+            <p class="element" id="sender-name"></p>
+            <p class="element" id="sender-number"></p>
+        </div>
+        <div class="box">
+            <p class="bold">Amount</p>
+            <p class="element" id="amount"></p>
+        </div>
+        <div class="box">
+            <p class="bold">Fee / Charge</p>
+            <p class="element">No Charge </p>
+        </div>
+        <div class="box">
+            <p class="element" id="main-text">Total Amount</p>
+            <p class="element" id="total-price">Rs: 1010</p>
+
+        </div>
+    </div>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+     
+        let recivernumber = urlParams.get('number');
+        let recivername = urlParams.get('name');
+        let price = urlParams.get('amount');
+
+        console.log(recivernumber)
+        console.log(recivername)
+        console.log(price)
+        
+        let sendername = 'Noman Akram';
+        let sendernumber = '03215898897';
+        
+        document.getElementById("reciver-name").innerHTML = recivername
+        document.getElementById("reciver-name2").innerHTML = recivername
+        document.getElementById("reciver-number").innerHTML = recivernumber
+        document.getElementById("sender-number").innerHTML = sendernumber
+        document.getElementById("sender-name").innerHTML = sendername
+        document.getElementById("total-price").innerHTML = `${price}.00`
+        document.getElementById("amount").innerHTML = `${price}.00`
+
+        let today = new Date();
+
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1;
+
+        let yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            if (mm == 1) mm = 'January'
+            if (mm == 2) mm = 'Februry'
+            if (mm == 3) mm = 'March'
+            if (mm == 4) mm = 'April'
+            if (mm == 5) mm = 'May'
+            if (mm == 6) mm = 'June'
+            if (mm == 7) mm = 'July'
+            if (mm == 8) mm = 'Augest'
+            if (mm == 9) mm = 'September'
+            if (mm == 10) mm = 'October'
+            if (mm == 11) mm = 'November'
+            if (mm == 12) mm = 'Decebmer'
+
+        }
+
+        const d = new Date();
+        let hour = d.getHours()
+        let mint = d.getMinutes()
+
+        let time;
+        if (hour > 12) {
+            hour = hour - 12
+            time = hour + ':' + mint + 'PM'
+        }
+        else {
+            time = hour + ':' + mint + 'AM'
+        }
+
+        today = dd + ' ' + mm + ' ' + yyyy + ' ' + time;
+
+        document.getElementById("date-time").innerHTML = today
+
+        let id = Math.floor(Math.random() * (10000000000 - 99999999998 + 1)) + 10000000000
+        document.getElementById("id").innerHTML = 'ID#' + id
+
+    </script>
+</body>
+
+
+
+</html>

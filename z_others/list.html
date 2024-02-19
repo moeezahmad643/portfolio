@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-size: larger;
+            align-items: center;
+            padding: 10px;
+            background-color: rgb(225, 225, 225);
+            background: #fff;
+
+
+
+
+            & p {
+                font-size: x-large;
+                font-weight: 400;
+            }
+        }
+
+        nav {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(240, 240, 240);
+            background: #fff;
+
+        }
+
+        #image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #21b25f;
+            font-size: 35px;
+            color: white;
+            border-radius: 50%;
+            width: 100px;
+            /* Initial width of the circle */
+            height: 100px;
+            /* Initial height of the circle */
+            overflow: hidden;
+            /* Ensure text doesn't overflow */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span></span>
+        <span></span>
+        <i onclick="window.location.href='add.html'" class="bi bi-x bi-x-lg"></i>
+    </header>
+    <div
+        style="display: flex; justify-content: center;padding-top: 30px; flex-direction: column;gap: 40px; align-items: center;">
+        <div
+            style="display: grid; place-items: center; background-color: #00BC5f; color: white; height: 80px; width: 80px; padding:0px 0px;font-size: 40px; border-radius: 90px;">
+            <i onclick="playAudio()" class="bi bi-check bi-check-lg"></i>
+        </div>
+        <div>
+
+            <div style="display: flex; padding: 10px; justify-content: center; gap: 10px;">
+                <p style="font-weight: bold;color: #454545; font-size: larger;">Rs</p>
+                <div style="display: flex; align-items: baseline;">
+                    <p id="amount" style="border: 0px;font-weight: 600; outline: 0px; font-size: 40px;">
+                    </p>
+                    <p style="font-weight: bold; font-size: larger; color: #454545;">.00</p>
+                </div>
+            </div>
+            <p style="font-weight: 500;font-size: larger; color: #454545;">Successfully Sent to</p>
+        </div>
+    </div>
+    <nav>
+        <div style="font-size: large; display: flex;flex-direction: column; margin: 10px; align-items: center;">
+            <section id="image"></section>
+            <div style="display: flex; align-items: center; flex-direction: column; margin: 15px;">
+                <p id="name" style="font-weight: 500; color: #454545;"></p>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="logo.jpg" style="font-weight: 500;" width="18" alt="">
+                    <p style="font-weight: 500; color: #454545;" id="number"></p>
+                </div>
+            </div>
+            <p style=" font-size: small; padding: 5px 10px ; border-radius:  30px; ">
+                <!-- this Contact has been save in your favourite -->
+                &nbsp;
+            </p>
+        </div>
+    </nav>
+    <div style="padding: 10px; margin: 10px; display: flex;flex-direction: column; gap: 20px;">
+        <div style="display: flex; gap: 10px; justify-content: space-between;" id="receiptButton">
+            <div style="display: flex; gap: 10px;">
+                <i class="bi bi-calendar3-range"></i>
+                <p style="font-weight: 800; color: #454545;">View Receipt</p>
+            </div>
+            <i style="font-weight: 700;font-size: large; color: #454545;" class="bi bi-chevron-right"></i>
+        </div>
+        <hr style="opacity: 0.3;">
+        <div style="display: flex; gap: 10px; justify-content: space-between;">
+            <div style="display: flex; gap: 10px;">
+                <i class="bi bi-share"></i>
+                <p style="font-weight: 700; font-size: large;color: #454545; ">Share</p>
+            </div>
+            <i style="font-weight: 800; color: #454545;" class="bi bi-chevron-right"></i>
+        </div>
+    </div>
+
+    <audio id="myAudio" autoplay src="tune.mp3"></audio>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const number = urlParams.get('number');
+        const amount = urlParams.get('amount');
+        const name = urlParams.get('name');
+
+        console.log(amount);
+
+
+        document.getElementById('image').innerHTML = name[0]
+        document.getElementById('name').innerHTML = name
+        document.getElementById('number').innerHTML = number
+
+
+        const myAudio = document.getElementById('myAudio');
+
+        // Function to play the audio
+        function playAudio() {
+            // Check if the audio is paused or hasn't started
+            if (myAudio.paused || myAudio.ended) {
+                // Play the audio
+                myAudio.play();
+            } else {
+                // Pause the audio if it's already playing
+                myAudio.pause();
+            }
+        }
+
+        playAudio()
+        
+        document.getElementById('amount').innerHTML = amount;
+
+        document.getElementById('receiptButton').addEventListener('click', seelist)
+
+        function seelist() {
+            let url = `see.html?number=${number}&amount=${amount}&name=${name}`
+            console.log(url);
+            window.location.href = url
+        }
+
+    </script>
+</body>
+
+</html>
