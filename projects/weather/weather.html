@@ -23,6 +23,7 @@
         .maincard {
             display: grid;
             height: 80%;
+            padding: 20px;
             place-items: center;
         }
 
@@ -91,6 +92,30 @@
                 }
             }
         }
+
+        @media screen and (max-width:450px) {
+            header {
+                font-size: small;
+
+                &>p {
+                    font-size: x-large;
+                }
+
+                &>div {
+                    padding: 2px 5px ; 
+                }
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            header {
+                font-size: small;
+
+                &>p {
+                    font-size: large;
+                }
+            }
+        }
     </style>
 </head>
 
@@ -140,14 +165,14 @@
                     console.log(data);
                     document.getElementById('city').innerHTML = data.name
                     if (data.name == undefined) {
-                        
+
                         document.getElementById('city').innerHTML = 'Enter Valid City'
-                        document.getElementById('temp').innerHTML='undefine'
-                        document.getElementById('humidity').innerHTML='undefine'
-                        document.getElementById('weather').innerHTML='undefine'
-                        document.getElementById('feelLike').innerHTML='undefine'
-                        document.getElementById('image').innerHTML='undefine'
-                    
+                        document.getElementById('temp').innerHTML = 'undefine'
+                        document.getElementById('humidity').innerHTML = 'undefine'
+                        document.getElementById('weather').innerHTML = 'undefine'
+                        document.getElementById('feelLike').innerHTML = 'undefine'
+                        document.getElementById('image').innerHTML = 'undefine'
+
                     } else {
                         document.getElementById('temp').innerHTML = parseInt(data.main.temp) - 274 + '°C'
                         document.getElementById('humidity').innerHTML = data.main.humidity

@@ -3,59 +3,108 @@
     padding: 0;
     font-family: system-ui;
     box-sizing: border-box;
-}   
-#main-box{
+}
+
+body {
+    background-color: rgba(234, 234, 234, 0.387);
+    background:url('background.jpg') ;
+}
+
+nav {
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+
+    & p {
+        text-shadow: 1px 1px 15px white;
+        font-size: 50px;
+        font-weight: 500;
+        padding: 20px;
+    }
+}
+
+#main-box {
+    opacity: 1;
+
     height: 90vh;
     width: 100%;
     display: grid;
     place-items: center;
-    & button{
+    /* border: 5px solid red; */
+    padding: 20px;
+
+    & button {
         font-size: x-large;
-        padding:20px 35px;
+        padding: 20px 35px;
         border-radius: 30px;
-        border:1px solid purple;
+        border: 1px solid purple;
         background-color: purple;
         color: white;
     }
-    & button:hover{
+
+    & button:hover {
         background-color: rgb(99, 1, 99);
     }
-    & button:active{
+
+    & button:active {
         transform: scale(0.9);
     }
-    
+
 }
 
-#card{
-    border: 1px solid gray;
-    box-shadow: 0 0 30px 5px rgba(128, 128, 128, 0.35);
-    
+#card {
+    border: 2px solid rgb(211, 211, 211);
+    box-shadow: 0 15px 30px 5px rgba(128, 128, 128, 0.464);
+background-color: rgba(248, 206, 244, 0.269);
+backdrop-filter: blur(15px);
     padding: 20px;
-    border-radius: 10px;
-    & h3{
+    border-radius: 8px;
+
+    & h3 {
         margin: 20px;
     }
-    & ul{
+
+    & ul {
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
         align-items: center;
 
     }
-    & li{
+
+    & li {
         width: 100%;
-        padding:20px 35px;
+        padding: 20px 35px;
         border-radius: 30px;
-        border:1px solid purple;
+        border: 1px solid purple;
         background-color: purple;
         color: white;
     }
-    & li:hover{
+
+    & li:hover {
         background-color: rgb(99, 1, 99);
     }
-    & li:active{
+
+    & li:active {
         transform: scale(0.9);
     }
 
+}
+
+@media screen and (max-width:500px) {
+    nav{
+        & p{
+            margin: 0;
+            padding: 0;
+        }
+    }
+    #card {
+        font-size: small;
+
+        & li {
+            padding: 10px 15px;
+        }
+    }
 }

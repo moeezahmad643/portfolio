@@ -156,8 +156,8 @@
           margin: 10px 0;
         }
         #project-btn {
-          background-color: #ffae01;
-          color: white;
+          background-color: #e49c02;
+          color: rgb(255, 255, 255);
         }
         #project-btn:hover {
           background-color: white;
